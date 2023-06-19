@@ -1,0 +1,13 @@
+.button-wrapper{
+    width:fit-content;
+}
+.button{
+    width: 170px;
+    height: 47px;
+    background-color: var(--black-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 18px;
+    border: 1px solid #34C94B;
+    border-radius: 12px;
+}

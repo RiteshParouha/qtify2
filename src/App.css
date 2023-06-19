@@ -1,0 +1,12 @@
+*{
+  box-sizing: border-box;
+}
+:root{
+  --primary-color:#34C94B;
+  --black-color:#121212;
+  --white-color:#FFFFFF;
+}
+.App{
+  height:100vh;
+  background-color: var(--black-color);
+}

@@ -1,0 +1,24 @@
+.input-wrapper{
+    border: 1px solid #121212;
+    width:fit-content;
+    border-radius: 8px;
+    align-content: center;
+    display:flex;
+}
+.search-bar{
+    border:none;
+    background-color: var(--white-color);
+    border-right: 1px solid #121212;
+    border-radius: 8px 0px 0px 8px;
+    width: 568px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 16px;
+}
+.search-icon{
+    background-color: var(--white-color);
+    width: 66px;
+    height: 48px;
+    border-radius: 0px 8px 8px 0px;
+    padding:14px 23px;
+}
