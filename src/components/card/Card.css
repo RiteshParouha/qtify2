@@ -1,0 +1,26 @@
+.card{
+    width: 159px;
+    height: 500px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    & .chip{
+        color:var(--white-color);
+        background-color: var(--black-color);
+        font-weight: 400;
+    }
+    
+}
+.banner{
+    padding:0.3rem;
+    background-color: var(--white-color);
+    border-radius: 0px 0px 10px 10px;
+}
+.album-img{
+    border-radius: 10px 10px 0px 0px;
+}
+.title{
+    font-weight: 400;
+    font-size: 14px;
+    color:var(--white-color);
+}
