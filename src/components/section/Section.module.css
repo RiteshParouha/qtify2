@@ -1,0 +1,18 @@
+.section_wrapper{
+    display:flex;
+    flex-direction: column;
+    padding:1rem;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.toggler{
+    color:var(--primary-color);
+}
+.card_wrapper{
+    display:flex;
+    gap:2rem;
+    flex-wrap: wrap;
+}
