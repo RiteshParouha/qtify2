@@ -11,7 +11,10 @@
 .toggler{
     color:var(--primary-color);
 }
-.card_wrapper{
+.cardWrapper{
+    display: inline-block;
+}
+.wrapper{
     display:flex;
     gap:2rem;
     flex-wrap: wrap;

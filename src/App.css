@@ -8,6 +8,8 @@
   --white-color:#FFFFFF;
 }
 .App{
-  height:100vh;
+  height:100vw;
   background-color: var(--black-color);
+  display:flex;
+  flex-direction: column;
 }
