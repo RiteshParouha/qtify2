@@ -3,7 +3,7 @@ import './App.css';
 import Card from './components/card/Card';
 import HeroImage from './components/heroImage/HeroImage';
 import NavBar from './components/navBar/NavBar';
-import { fetchTopAlbum, fetchNewAlbum } from './api/api';
+import { fetchTopAlbum, fetchNewAlbum, fetchSong } from './api/api';
 import {useState, useEffect } from 'react';
 import Section from './components/section/Section';
 
@@ -11,6 +11,8 @@ function App() {
   
   const[data,setData]=useState([]);
   const[newData,setNewData]=useState([]);
+  const[songData,setSongData]=useState([]);
+  const[filteredSong,setFilteredSong]=useState([]);
 
 
   const getApiData=async(apiFor)=>{
@@ -31,11 +33,35 @@ function App() {
           console.error(err); 
           }
       }
+      else if(apiFor==="song"){
+        try {
+          let res= await fetchSong();
+          console.log(res,"app");
+          setSongData(res);
+          setFilteredSong(res);
+          } catch (err) {
+          console.error(err); 
+          }
+      }
+  }
+
+  const filterSong=(key)=>{
+     if(key==="all")
+     setFilteredSong(songData)
+     else{
+      let res;
+      res=songData.filter((element)=>{
+        if(element.genre.key===key)
+        return element;
+      });
+      setFilteredSong(res);
+     }
   }
   
   useEffect(()=>{
      getApiData("top");
      getApiData("new"); 
+     getApiData("song")
   },[]);
 
 
@@ -45,6 +71,8 @@ function App() {
       <HeroImage/>
       <Section sectionName={"Top Albums"} data={data} type={"album"}/>
       <Section sectionName={"New Albums"} data={newData} type={"album"}/>
+      <Section sectionName={"Songs"} data={filteredSong} type={"song"} filterSong={filterSong}/>
+
     </div>
   );
 }

@@ -26,9 +26,26 @@ const Card = ({ data, type }) => {
       );
     }
     case "song": {
+      const { image,title, likes } = data;
+      return (
+        <div className="card">
+          <img
+            className="album-img"
+            src={image}
+            alt="album"
+            width="200px"
+            height="200px"
+          />
+          <div className="banner">
+            <Chip className="chip" label={`${likes} Likes`} />
+          </div>
+          <div className="title">
+            <h3>{title}</h3>
+          </div>
+        </div>
+      );
     }
-    default: {
-    }
+    default: {<></>}
   }
 };
 

@@ -9,7 +9,7 @@ const RightNavigation = () => {
      swiper.on("slideChange",function(){
         setIsEnd(swiper.isEnd);
      })
-    },[]);
+    });
   return (
     <div className={styles.rightNavigation}>
       {!isEnd && <RightArrow onClick={()=> swiper.slideNext()}/>}
