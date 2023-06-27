@@ -44,6 +44,7 @@ function App() {
       <NavBar/>
       <HeroImage/>
       <Section sectionName={"Top Albums"} data={data} type={"album"}/>
+      <Section sectionName={"New Albums"} data={newData} type={"album"}/>
     </div>
   );
 }
