@@ -6,6 +6,7 @@ import NavBar from './components/navBar/NavBar';
 import { fetchTopAlbum, fetchNewAlbum, fetchSong } from './api/api';
 import {useState, useEffect } from 'react';
 import Section from './components/section/Section';
+import SimpleAccordion from './components/Facts/SimpleAccordion';
 
 function App() {
   
@@ -72,6 +73,7 @@ function App() {
       <Section sectionName={"Top Albums"} data={data} type={"album"}/>
       <Section sectionName={"New Albums"} data={newData} type={"album"}/>
       <Section sectionName={"Songs"} data={filteredSong} type={"song"} filterSong={filterSong}/>
+      <SimpleAccordion/>
 
     </div>
   );

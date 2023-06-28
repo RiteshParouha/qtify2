@@ -29,7 +29,7 @@ const Carousel = ({data,component}) => {
         <Controls data={data}/>
         <LeftNavigation/>
         <RightNavigation/>
-        {data.map((item)=>{
+        {data && data.map((item)=>{
            return (
             <SwiperSlide style={{width:"200px"}}>{component(item)}</SwiperSlide>
            ) 
